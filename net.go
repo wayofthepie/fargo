@@ -811,5 +811,10 @@ func (i *Instance) Id() string {
 		return i.DataCenterInfo.Metadata.InstanceID
 	}
 
+	// If InstanceId is set, use this always
+	if i.InstanceID != "" {
+		return i.InstanceID
+	}
+
 	return i.HostName
 }
