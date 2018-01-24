@@ -101,6 +101,8 @@ type Instance struct {
 	LeaseInfo LeaseInfo        `xml:"leaseInfo" json:"leaseInfo"`
 	Metadata  InstanceMetadata `xml:"metadata" json:"metadata"`
 
+	InstanceID string `xml:"instanceId,omitempty" json:"instanceId,omitempty"`
+
 	UniqueID func(i Instance) string `xml:"-" json:"-"`
 }
 
